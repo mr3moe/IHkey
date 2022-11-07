@@ -6,14 +6,7 @@
 #include "xorstr.hpp"
 #include "AntiVM.h"
 
-#define FEATURE_KEY(index, leaf_lo, leaf_hi, subleaf_key, subleaf_used, reg, bit) ( \
-    (((index)        & 0x1F) <<  0) | \
-    (((leaf_lo)      & 0x1F) <<  5) | \
-    (((leaf_hi)      & 0x03) << 10) | \
-    (((subleaf_key)  & 0x1F) << 12) | \
-    (((subleaf_used) & 0x01) << 17) | \
-    (((reg)          & 0x03) << 18) | \
-    (((bit)          & 0x1F) << 20))
+
 
 #pragma warning( push )
 #pragma warning( disable : 4789 )
